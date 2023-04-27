@@ -1,7 +1,22 @@
 # TALLER 2 - EJERCICIOS DE ALGORITMIA ESTRUCTURA CONDICIONAL
 
+
+
 #Ejercicio1
 
+try:
+    num1 = (float(input("por favor digite el primer numero: ")))
+    num2 = (float(input("por favor digite el segundo numero: ")))
+
+    if num1 > num2:
+        print(num2, num1)
+    else:
+        print(num1, num2)
+except:
+    print("error por favor digita numeros y no letras")
+
+
+'''
 num1 = (float(input("por favor digite el primer numero: ")))
 num2 = (float(input("por favor digite el segundo numero: ")))
 
@@ -10,8 +25,23 @@ if num1 > num2:
 else:
     print(num1, num2)
 
+'''
+
 #Ejercicio4
 
+try:
+    tiempo = float(input("cuantos minutos duro tu llamada: "))
+
+    if tiempo <= 3:
+        print("debes pagar 200 pesos")
+    else:
+        valorMas = tiempo - 3
+        valorTotal = (valorMas * 100) + 200
+        print(f"el valor a pagar es {valorTotal} pesos")
+except:
+    print("por favor digite numeros no letras")
+
+'''
 tiempo = float(input("cuantos minutos duro tu llamada: "))
 
 if tiempo <= 3:
@@ -21,8 +51,10 @@ else:
     valorTotal = (valorMas * 100) + 200
     print(f"el valor a pagar es {valorTotal} pesos")
 
-#Ejercicio5
+'''
 
+#Ejercicio5
+'''
 N = int(input("cuantos conejos hay en total: "))
 C1 = int(input("cuantos conejos blancos hay en total: "))
 C2 = int(input("cuantos conejos negros hay en total: "))
@@ -102,10 +134,12 @@ if clave == 1 or clave == 2:
     cantidad = int(input("ingrese la cantidad a comprar: "))
     if clave == 1:
         descuento = precio - (0.10*precio)
-        print(f"el nombre del producto es {articulo}, su clave es {clave}, su precio es original es {precio} y su valor con descuento es {descuento}")
+        totalConDes = descuento * cantidad
+        print(f"el nombre del producto es {articulo}, su clave es {clave}, su precio original es {precio} por cada uno de los articulos y el producto con descuento por la clave escogida es {descuento} y en total seria {totalConDes}")
     else:
         descuento = precio - (0.20*precio)
-        print(f"el nombre del producto es {articulo}, su clave es {clave}, su precio es original es {precio} y su valor con descuento es {descuento}")
+        totalConDes = descuento * cantidad
+        print(f"el nombre del producto es {articulo}, su clave es {clave}, su precio original es {precio} por cada uno de los articulos y el producto con descuento por la clave escogida es {descuento} y en total seria {totalConDes}")
 else:
     print("la clave del producto debe ser igual a 1 o 2 para seguir")
 
@@ -148,3 +182,57 @@ if (dias >= 7 and distancia > 800):
 else:
     print(f"el total de su ticket es {total} dolares")
 
+
+
+
+#Ejercicio 2
+
+num = int(input("por favor digita un numero entre 1 y 10: "))
+
+ 
+
+if num >= 1 and num <= 10:
+    if ((num % 2) == 0):
+        numIs = "es par"
+    else:
+        numIs = "es impar"
+    match numIs:
+        case "es impar":
+            print("numero impar")
+        case "es par":
+            print("numero par")
+else:
+    print("numero invalido")
+
+
+#Ejercicio 3
+
+num = int(input("ingrese un valor de 1 a 10: "))
+
+if num >= 1 and num <= 10:
+    match num:
+        case 1:
+            print(f"{num} uno")
+        case 2:
+            print(f"{num} dos")
+        case 3:
+            print(f"{num} tres")
+        case 4:
+            print(f"{num} cuatro")
+        case 5:
+            print(f"{num} cinco")
+        case 6:
+            print(f"{num} seis")
+        case 7:
+            print(f"{num} siete")
+        case 8:
+            print(f"{num} ocho")
+        case 9:
+            print(f"{num} nueve")
+        case 10:
+            print(f"{num} dies")
+else:
+    print("numero invalido")
+
+
+'''
